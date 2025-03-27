@@ -104,6 +104,8 @@ class Board(object):
             print(f"{i + 1}|", end=" ")
             print(" ".join(str(cell) if cell else "." for cell in row))
         print(f"\nХодят: {'Белые' if self.current_turn == 'white' else 'Черные'}\n")
+        print(f"Количество ходов: {self.move_count}\n")
+
 
     @staticmethod
     def chess_to_coords(chess_pos):
