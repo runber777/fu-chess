@@ -8,11 +8,13 @@ class Board(object):
     Attributes:
         grid (list): 8x8 массив, представляющий игровое поле.
         current_turn (str): Цвет игрока, который сейчас ходит
+        move_count (int): Количество сделанных ходов.
     """
     def __init__(self):
         """Создает шахматную доску и расставляет фигуры."""
         self.grid = [[None for _ in range(8)] for _ in range(8)]
         self.current_turn = "white"
+        self.move_count = 0 
         if game_type == 1:
             self.place()
         if game_type == 2:
