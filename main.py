@@ -90,6 +90,7 @@ class Board(object):
             self.grid[row2][col2] = piece
             self.grid[row1][col1] = None
             self.current_turn = "black" if self.current_turn == "white" else "white"
+            self.move_count += 1
             return True
         else:
             print("Неверный ход.")
